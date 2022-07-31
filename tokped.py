@@ -30,6 +30,7 @@ class tokopedia():
 			print("Toko tidak valid!")
 	
 	def getData(self):
+		print("====== GRABBING PRODUK ======")
 		print("[+] Mulai download produk ...")
 		urlJson = 'https://ace.tokopedia.com/search/product/v3?shop_id={}&rows=15000&start=0&full_domain=www.tokopedia.com&scheme=https&device=desktop&source=shop_product'.format(self.idToko)
 		req = requests.get(urlJson, headers=self.headerbrowser,timeout=300).json()
@@ -91,9 +92,15 @@ class tokopedia():
 		print('done! '+ self.idToko+'_tokped.csv')
 		f.close()
 
-print("[ TOKPED-PRODUCT-GRABBER v1.0 by heryan ]")
+print("[ TOKOPEDIA-PRODUCT-GRABBER v1.0 by heryan ]")
+print(" _____     _                        _ _       ")
+print("|_   _|   | |                      | (_)      ")
+print("  | | ___ | | _____  _ __   ___  __| |_  __ _ ")
+print("  | |/ _ \| |/ / _ \| '_ \ / _ \/ _` | |/ _` |")
+print("  | | (_) |   < (_) | |_) |  __/ (_| | | (_| |")
+print("  \_/\___/|_|\_\___/| .__/ \___|\__,_|_|\__,_|")
+print("                    | |                       ")
+print("                    |_|                       ")
 print("[+] https://github.com/heryandp/tokopedia-product-scrap")
 inputLink = input('[+] Masukkan username toko : https://www.tokopedia.com/')
-print("")
-print("====== GRABBING PRODUK ======")
 actionToko = tokopedia(inputLink)

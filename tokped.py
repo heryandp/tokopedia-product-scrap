@@ -16,7 +16,7 @@ class tokopedia():
 	
 	def getid(self):
 		try:
-			req = requests.post(self.tokourl, headers=self.headerbrowser, timeout=3.000)
+			req = requests.post(self.tokourl, headers=self.headerbrowser, timeout=300)
 			# print(req.status_code)
 			if req.status_code == 200:
 				sup = bs(req.text, 'html.parser')
@@ -26,8 +26,9 @@ class tokopedia():
 				self.getData()
 			else:
 				print('Toko Tidak ditemukan')
-		except:
-			print("Toko tidak valid!")
+		except Exception as e:
+			# print(e)
+			print("Timeout/Toko tidak valid!")
 	
 	def getData(self):
 		print("====== GRABBING PRODUK ======")

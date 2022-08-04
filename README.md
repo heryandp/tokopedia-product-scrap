@@ -2,9 +2,7 @@ Tokped Product Scrapper v1.0
 
 Windows
 ========
--Download dan jalankan setup.exe
--https://github.com/heryandp/shopee-product-scrap/releases/
-
+-Download dan jalankan setup.exe (https://github.com/heryandp/tokopedia-product-scrap/releases/)
 
 MacOs/Linux
 ===========
